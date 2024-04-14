@@ -1,0 +1,49 @@
+Untuk pertanyaan pertama, kita perlu menjadikan kelas Mahasiswasebagai kelas generik. Berikut implementasinya
+public class Mahasiswaku {
+
+    public static void main(String[] args) {
+
+        Mahasiswa<String, String, Integer> m = new Mahasiswa<>();
+
+        m.setNim("20220040067");
+        m.setName("Nadia Sari");
+        m.setClas(22);
+
+        System.out.println(m.getNim());
+        System.out.println(m.getName());
+        System.out.println(m.getClas());
+
+    }
+}
+
+class Mahasiswa<N, S, C> {
+    private N nim;
+    private S name;
+    private C clas;
+
+    public void setNim(N nim) {
+        this.nim = nim;
+    }
+
+    public N getNim() {
+        return nim;
+    }
+
+    public void setName(S name) {
+        this.name = name;
+    }
+
+    public S getName() {
+        return name;
+    }
+
+    public void setClas(C clas) {
+        this.clas = clas;
+    }
+
+    public C getClas() {
+        return clas;
+    }
+}
+
+
